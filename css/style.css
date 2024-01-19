@@ -21,6 +21,9 @@ main{
     background-color: #0c60df;
 }
 
+tr td:first-child{
+    width: 50%;
+}
 
 
 
@@ -45,8 +48,5 @@ main{
         width: calc(100vw - 80px);
     }
 
-    label{
-        display: none;
-    }
 
 }
