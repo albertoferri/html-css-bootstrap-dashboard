@@ -18,20 +18,19 @@
 
 </head>
 <body>
-
+    <!-- navbar -->
     <header>
-        <header>
+        <div class="container-fluid">
 
             <div class="row">
                 <div class="container">
     
-                    <nav class="navbar bg-body-tertiary lh-lg vw-100">
+                    <nav class="navbar  lh-lg">
                         <div class="container-fluid justify-content-start flex-nowrap">
                           <a class="navbar-brand">
                             <button type="button" class="btn btn-light"><img src="img/logo.svg" alt=""></button>
-                            
                           </a>
-                          <form class="d-flex w-100" role="search">
+                          <form class="d-flex w-100 gap-2" role="search">
                             <input class="form-control me-2 bg-body-secondary" type="search" placeholder="Search" aria-label="Search">
                             <button type="button" class="btn btn-light"><i class="fa-solid fa-list"></i></button>
                             <button type="button" class="btn btn-light"><i class="fa-solid fa-circle-question"></i></button>
@@ -42,9 +41,32 @@
                       </nav>
                 </div>
             </div>
-    
-        </header>
+        </div>
+
     </header>
+    <!-- fine navbar -->
+
+    <!-- inizio aside bar -->
+    <div class="aside-bar bg-primary vh-100 text-white">
+        <div class="container py-3 gap-1 d-flex flex-column text-center">
+            <div class="aside-link p-1">
+                <i class="fa-solid fa-house"></i>
+                <label class="pe-2">Home</label>
+            </div>
+            <div class="aside-link p-1">
+                <i class="fa-solid fa-chart-simple pe-1 "></i>
+                <label class="pe-4">Stats</label>
+            </div>
+            <div class="aside-link p-1">
+                <i class="fa-solid fa-signal"></i>
+                <label>Signals</label>
+            </div>
+        </div>
+
+        
+    </div>
+    <!-- fine aside bar -->
+
 
 
    <!-- bootstrap  -->
