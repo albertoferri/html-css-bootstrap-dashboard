@@ -1,4 +1,42 @@
 .aside-bar{
     width: 250px;
+    height: calc(100vh - 70px);
     font-size: 26px;
+    background-color: #051e34;
 }
+
+main{
+    width: calc(100vw - 250px);
+    height: calc(100vh - 70px);
+}
+
+.fa-code{
+    width: 40px;
+    height: 40px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* media query opzionale per vedere come collassare elementi */
+
+/* @media screen and (max-width:578px){
+
+    .aside-bar{
+        width: 80px;
+    }
+
+    label{
+        display: none;
+    }
+
+} */
