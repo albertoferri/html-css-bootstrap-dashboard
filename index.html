@@ -28,14 +28,23 @@
                     <nav class="navbar lh-lg">
                         <div class="container-fluid justify-content-start flex-nowrap">
                           <a class="navbar-brand">
-                            <button type="button" class="btn btn-light"><img src="img/logo.svg" alt=""></button>
+                            <img src="img/logo.svg" alt="">
                           </a>
                           <form class="d-flex w-100 gap-2" role="search">
                             <input class="form-control me-2 bg-body-secondary" type="search" placeholder="Search" aria-label="Search">
                             <button type="button" class="btn btn-light d-none d-lg-block"><i class="fa-solid fa-list"></i></button>
                             <button type="button" class="btn btn-light d-none d-lg-block"><i class="fa-solid fa-circle-question"></i></button>
                             <button type="button" class="btn btn-light d-none d-lg-block"><i class="fa-solid fa-ellipsis-vertical"></i></button>
-                            <button type="button" class="btn btn-light"><i class="fa-solid fa-bell text-warning"></i></button>
+                            <div class="btn-group dropstart">
+                                <button type="button" class="btn btn-light rounded-2" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fa-solid fa-bell text-warning"></i>
+                                </button>
+                                <ul class="dropdown-menu">
+                                  <li class="px-3 py-1"><i class="fa-solid fa-user"></i> Profilo</li>
+                                  <li class="px-3 py-1"><i class="fa-solid fa-coins"></i> Fatturazione</li>
+                                  <li class="px-3 py-1 text-danger "><i class="fa-solid fa-right-from-bracket text-danger"></i> Logout</li>
+                                </ul>
+                              </div>
                           </form>
                         </div>
                       </nav>
@@ -78,8 +87,8 @@
         <!-- inizio main -->
         <main class="pe-2 ps-0  overflow-auto ">
             <div class="container-fluid">
-                <div class="row bg-primary text-white mb-3 py-0 py-md-2 order-2 order-md-1 gap-sm-2 gap-md-0">
-                    <div class="col-12 col-md-6 mt-2 w-mb-50">
+                <div class="row bg-primary text-white mb-3 py-0 py-md-2 gap-sm-2 gap-md-0">
+                    <div class="col-12 col-md-6 mt-2 w-mb-50 order-2 mb-1">
                         <h3 class="d-inline pe-1 ">Boolean</h3>
                         <span class="badge rounded-pill my_pill">Piano blaze</span>
                         <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb" class="py-2">
@@ -93,13 +102,84 @@
                             </ol>
                           </nav>
                     </div>
-                    <div class="col-12 col-md-3 w-mb-50 d-flex flex-column gap-1 justify-content-center order-3 order-md-2">
+                    <div class="col-12 col-md-3 w-mb-50 d-flex flex-column gap-1 justify-content-center order-3 order-md-2 mb-3">
                         <p class="m-0">Studenti online negli ultimi 30 minuti</p>
                         <span class="fs-2">125</span>
                     </div>
-                    <div class="col-12 col-md-3 w-md-50 d-flex justify-content-start align-items-start gap-3 pe-3 pt-0 pt-md-3 order-1 order-md-3 justify-content-md-end order-1 order-md-3">
+                    <div class="col-12 col-md-3 w-md-50 d-flex justify-content-start align-items-start gap-3 pe-3 pt-0 pt-md-3 order-1 order-md-3 my-3 justify-content-md-end">
                         <p class="my-1">Nuovo Studente</p>
-                        <button type="button" class="btn btn-outline-light"><i class="fa-solid fa-plus fs-5"></i></button>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                <h1 class="modal-title fs-5 text-black" id="exampleModalLabel">Inserisci un nuovo studente</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form class="d-flex .flex-row flex-wrap row-cols-2">
+                                        <div class="mb-1">
+                                          <label for="exampleInputEmail1" class="form- text-black mb-2">Nome</label>
+                                            <input class="form-control" type="text">
+                                        </div>
+                                        <div class="mb-1">
+                                            <label for="exampleInputEmail1" class="form-label text-black">Cognome</label>
+                                              <input class="form-control" type="text">
+                                        </div>
+                                        <div class="mb-1">
+                                            <label for="exampleInputEmail1" class="form-label text-black">Email</label>
+                                            <div class="input-group">
+                                                <span class="input-group-text" id="basic-addon1">@</span>
+                                                <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+                                              </div>
+                                        </div>
+                                        <div class="mb-1">
+                                          <label for="exampleInputPassword1" class="form-label text-black">Password</label>
+                                          <input type="password" class="form-control" id="exampleInputPassword1">
+                                        </div>
+                                        <div class="mb-1">
+                                            <label for="exampleInputEmail1" class="form-label text-black">Città</label>
+                                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        </div>
+                                        <div class="mb-1 w-25">
+                                            <label for="exampleInputEmail1" class="form-label text-black">Stato</label><br>
+                                            <div class="btn-group w-100">
+                                                <button class="btn btn-outline-light bg-secondary-subtle dropdown-toggle text-black-50" type="button" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+                                                  Scegli...
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                  <li><a class="dropdown-item" href="#">Italia</a></li>
+                                                  <li><a class="dropdown-item" href="#">Spagna</a></li>
+                                                  <li><a class="dropdown-item" href="#">Veneto</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="mb-1 w-25">
+                                            <label for="exampleInputEmail1" class="form-label text-black">Città</label>
+                                            <input type="text" class="form-control text-black" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        </div>
+                                        <div class="mb-1 form-check w-100">
+                                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary w-25 me-1">Salva</button>
+                                        <button type="submit" class="btn btn-warning w-25">Svuota</button>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+
+                        <!-- <button type="button" class="btn btn-outline-light"><i class="fa-solid fa-plus"></i></button> -->
                     </div>
 
                 </div>
@@ -120,32 +200,32 @@
                                                 <thead>
                                                   <tr>
                                                     <th scope="col" class="">Nome</th>
-                                                    <th scope="col" class="">Data inizio</th>
-                                                    <th scope="col" class="">ROI</th>
+                                                    <th scope="col" class="d-none d-md-table-cell">Data inizio</th>
+                                                    <th scope="col" class="d-none d-md-table-cell">ROI</th>
                                                     <th scope="col" class="">Stato</th>
                                                     <th scope="col" class="text-center ">Azioni</th>
                                                   </tr>
                                                 </thead>
                                                 <tbody>
                                                   <tr>
-                                                    <td class="">
+                                                    <td class="w-50">
                                                         <div class="d-flex align-items-center gap-1">
                                                             <i class="fa-solid fa-code d-flex justify-content-center align-items-center rounded-circle bg-danger text-white fs-4"></i>
                                                             <span>Classe 77</span>
                                                         </div>
                                                     </td>
-                                                    <td class="d-none d-md-table-cell">15 Feb 2021</td>
+                                                    <td class="d-none d-md-table-cell w-25">15 Feb 2021</td>
                                                     <td class="d-none d-md-table-cell">20%</td>
                                                     <td><span class="badge rounded-pill text-bg-success">Done</span></td>
                                                     <td>
-                                                        <div class="d-flex justify-content-center">
+                                                        <div class="d-flex justify-content-center gap-1 ">
                                                             <button type="button" class="btn btn-outline-dark"><i class="fa-solid fa-pen"></i></button>
                                                             <button type="button" class="btn btn-outline-dark"><i class="fa-solid fa-trash-can"></i></button>
                                                         </div>
                                                     </td>
                                                   </tr>
                                                   <tr>
-                                                    <td class="">
+                                                    <td class="w-50">
                                                         <div class="d-flex align-items-center gap-1">
                                                             <i class="fa-solid fa-code d-flex justify-content-center align-items-center rounded-circle bg-danger text-white fs-4"></i>
                                                             <span>Classe 78</span>
@@ -155,14 +235,14 @@
                                                     <td class="d-none d-md-table-cell">20%</td>
                                                     <td><span class="badge rounded-pill text-bg-success">Done</span></td>
                                                     <td>
-                                                        <div class="d-flex justify-content-center">
+                                                        <div class="d-flex justify-content-center gap-1">
                                                             <button type="button" class="btn btn-outline-dark"><i class="fa-solid fa-pen"></i></button>
                                                             <button type="button" class="btn btn-outline-dark"><i class="fa-solid fa-trash-can"></i></button>
                                                         </div>
                                                     </td>
                                                   </tr>
                                                   <tr>
-                                                    <td class="">
+                                                    <td class="w-50">
                                                         <div class="d-flex align-items-center gap-1">
                                                             <i class="fa-solid fa-code d-flex justify-content-center align-items-center rounded-circle bg-danger text-white fs-4"></i>
                                                             <span>Classe 79</span>
@@ -172,14 +252,14 @@
                                                     <td class="d-none d-md-table-cell">20%</td>
                                                     <td><span class="badge rounded-pill text-bg-warning text-white">Process</span></td>
                                                     <td>
-                                                        <div class="d-flex justify-content-center">
+                                                        <div class="d-flex justify-content-center gap-1">
                                                             <button type="button" class="btn btn-outline-dark"><i class="fa-solid fa-pen"></i></button>
                                                             <button type="button" class="btn btn-outline-dark"><i class="fa-solid fa-trash-can"></i></button>
                                                         </div>
                                                     </td>
                                                   </tr>
                                                   <tr>
-                                                    <td class="">
+                                                    <td class="w-50">
                                                         <div class="d-flex align-items-center gap-1">
                                                             <i class="fa-solid fa-code d-flex justify-content-center align-items-center rounded-circle bg-danger text-white fs-4"></i>
                                                             <span>Classe 80</span>
@@ -189,14 +269,14 @@
                                                     <td class="d-none d-md-table-cell">20%</td>
                                                     <td><span class="badge rounded-pill text-bg-success">Done</span></td>
                                                     <td>
-                                                        <div class="d-flex justify-content-center">
+                                                        <div class="d-flex justify-content-center gap-1">
                                                             <button type="button" class="btn btn-outline-dark"><i class="fa-solid fa-pen"></i></button>
                                                             <button type="button" class="btn btn-outline-dark"><i class="fa-solid fa-trash-can"></i></button>
                                                         </div>
                                                     </td>
                                                   </tr>
                                                   <tr>
-                                                    <td class="">
+                                                    <td class="w-50">
                                                         <div class="d-flex align-items-center gap-1">
                                                             <i class="fa-solid fa-code d-flex justify-content-center align-items-center rounded-circle bg-danger text-white fs-4"></i>
                                                             <span>Classe 81</span>
@@ -206,14 +286,14 @@
                                                     <td class="d-none d-md-table-cell">20%</td>
                                                     <td><span class="badge rounded-pill text-bg-danger">Failed</span></td>
                                                     <td>
-                                                        <div class="d-flex justify-content-center">
+                                                        <div class="d-flex justify-content-center gap-1">
                                                             <button type="button" class="btn btn-outline-dark"><i class="fa-solid fa-pen"></i></button>
                                                             <button type="button" class="btn btn-outline-dark"><i class="fa-solid fa-trash-can"></i></button>
                                                         </div>
                                                     </td>
                                                   </tr>
                                                   <tr>
-                                                    <td class="">
+                                                    <td class="w-50">
                                                         <div class="d-flex align-items-center gap-1">
                                                             <i class="fa-solid fa-code d-flex justify-content-center align-items-center rounded-circle bg-danger text-white fs-4"></i>
                                                             <span>Classe 82</span>
@@ -223,14 +303,14 @@
                                                     <td class="d-none d-md-table-cell">20%</td>
                                                     <td><span class="badge rounded-pill text-bg-success">Done</span></td>
                                                     <td>
-                                                        <div class="d-flex justify-content-center">
+                                                        <div class="d-flex justify-content-center gap-1">
                                                             <button type="button" class="btn btn-outline-dark"><i class="fa-solid fa-pen"></i></button>
                                                             <button type="button" class="btn btn-outline-dark"><i class="fa-solid fa-trash-can"></i></button>
                                                         </div>
                                                     </td>
                                                   </tr>
                                                   <tr>
-                                                    <td class="">
+                                                    <td class="w-50">
                                                         <div class="d-flex align-items-center gap-1">
                                                             <i class="fa-solid fa-code d-flex justify-content-center align-items-center rounded-circle bg-danger text-white fs-4"></i>
                                                             <span>Classe 83</span>
@@ -240,14 +320,14 @@
                                                     <td class="d-none d-md-table-cell">20%</td>
                                                     <td><span class="badge rounded-pill text-bg-danger">Failed</span></td>
                                                     <td>
-                                                        <div class="d-flex justify-content-center">
+                                                        <div class="d-flex justify-content-center gap-1">
                                                             <button type="button" class="btn btn-outline-dark"><i class="fa-solid fa-pen"></i></button>
                                                             <button type="button" class="btn btn-outline-dark"><i class="fa-solid fa-trash-can"></i></button>
                                                         </div>
                                                     </td>
                                                   </tr>
                                                   <tr>
-                                                    <td class="">
+                                                    <td class="w-50">
                                                         <div class="d-flex align-items-center gap-1">
                                                             <i class="fa-solid fa-code d-flex justify-content-center align-items-center rounded-circle bg-danger text-white fs-4"></i>
                                                             <span>Classe 118</span>
@@ -257,7 +337,7 @@
                                                     <td class="d-none d-md-table-cell">20%</td>
                                                     <td><span class="badge rounded-pill text-bg-success">Done</span></td>
                                                     <td>
-                                                        <div class="d-flex justify-content-center">
+                                                        <div class="d-flex justify-content-center gap-1">
                                                             <button type="button" class="btn btn-outline-dark"><i class="fa-solid fa-pen"></i></button>
                                                             <button type="button" class="btn btn-outline-dark"><i class="fa-solid fa-trash-can"></i></button>
                                                         </div>
@@ -308,7 +388,7 @@
                             </div>
                         </div>
                         <div class="col-12 col-lg-4 pt-sm-3 pt-md-0 px-0">
-                            <div class="row flex-column gap-3 px-md-4">
+                            <div class="row flex-column gap-3 ps-md-4 pe-md-2">
                                 <div class="col pt-3 pt-md-0 ps-md-3 pe-md-0 ">
                                     <div class="card w-100 mt-3 mt-md-0" style="width: 18rem;">
                                         <div class="card-header fw-medium">
@@ -371,7 +451,6 @@
 
 
     <!-- fine main -->
-
 
 
    <!-- bootstrap  -->
