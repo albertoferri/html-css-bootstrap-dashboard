@@ -23,11 +23,11 @@ main{
     transition: .3s ease-in-out;
 }
 
-.modal-header{
+.modal_header-set{
     height: 60px;
 }
 
-.modal-body{
+.modal_body-set{
     height: calc(100vh - 60px);
 }
 
