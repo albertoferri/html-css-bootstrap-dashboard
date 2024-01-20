@@ -1,3 +1,4 @@
+/* personal width set */
 .aside-bar{
     width: 200px;
     font-size: 26px;
@@ -13,16 +14,6 @@ main{
     width: 40px;
     height: 40px;
 }
-
-.my_pill{
-    background-color: #0c60df;
-}
-
-.aside-link:hover{
-    background-color: grey;
-    transition: .3s ease-in-out;
-}
-
 .modal_header-set{
     height: 60px;
 }
@@ -32,6 +23,19 @@ main{
 }
 
 
+/* personal style set */
+.my_pill{
+    background-color: #0c60df;
+}
+
+.my_pointer{
+    cursor: pointer;
+}
+
+.aside-link:hover{
+    background-color: grey;
+    transition: .3s ease-in-out;
+}
 
 
 

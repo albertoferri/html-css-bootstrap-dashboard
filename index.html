@@ -27,7 +27,7 @@
     
                     <nav class="navbar lh-lg">
                         <div class="container-fluid justify-content-start flex-nowrap">
-                          <a class="navbar-brand">
+                          <a class="navbar-brand my_pointer">
                             <img src="img/logo.svg" alt="">
                           </a>
                           <form class="d-flex w-100 gap-2" role="search">
@@ -61,22 +61,22 @@
         <div class="aside-bar text-white">
             <div class="container h-100 py-3 gap-1 d-flex flex-column justify-content-between  text-center">
                 <div class="aside-top">
-                    <div class="aside-link p-1">
+                    <div class="aside-link p-1 my_pointer">
                         <i class="fa-solid fa-house"></i>
-                        <label class="pe-2 d-none d-lg-inline">Home</label>
+                        <label class="pe-2 d-none d-lg-inline my_pointer">Home</label>
                     </div>
-                    <div class="aside-link p-1">
+                    <div class="aside-link p-1 my_pointer">
                         <i class="fa-solid fa-chart-simple pe-1 "></i>
-                        <label class="pe-4 d-none d-lg-inline">Stats</label>
+                        <label class="pe-4 d-none d-lg-inline my_pointer">Stats</label>
                     </div>
-                    <div class="aside-link p-1">
+                    <div class="aside-link p-1 my_pointer">
                         <i class="fa-solid fa-signal"></i>
-                        <label class="d-none d-lg-inline">Signals</label>
+                        <label class="d-none d-lg-inline my_pointer">Signals</label>
                     </div>
                 </div>
-                <div class="aside-link py-3">
+                <div class="aside-link py-3 my_pointer">
                     <i class="fa-solid fa-gear"></i>
-                    <label class="d-none d-lg-inline">Admin</label>
+                    <label class="d-none d-lg-inline my_pointer">Admin</label>
                 </div>
             </div>
     
@@ -113,7 +113,7 @@
 
                         <div class="offcanvas offcanvas-end w-50" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
                         <div class="offcanvas-header">
-                            <h5 class="offcanvas-title" id="offcanvasRightLabel"><i class="fa-solid fa-plus"></i></h5>
+                            <h5 class="offcanvas-title" id="offcanvasRightLabel">Inserisci nuovo studente</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></i></button>
                         </div>
                         <div class="offcanvas-body">
@@ -138,6 +138,10 @@
                                       <label for="exampleInputPassword1" class="form-label text-black">Password</label>
                                       <input type="password" class="form-control" id="exampleInputPassword1">
                                     </div>
+                                    <div class="mb-1 w-100">
+                                        <label for="exampleInputEmail1" class="form- text-black mb-2">Indirizzo</label>
+                                          <input class="form-control" type="text">
+                                      </div>
                                     <div class="mb-1">
                                         <label for="exampleInputEmail1" class="form-label text-black">Città</label>
                                         <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -159,7 +163,7 @@
                                         <label for="exampleInputEmail1" class="form-label text-black">CAP</label>
                                         <input type="text" class="form-control text-black" id="exampleInputEmail1" aria-describedby="emailHelp">
                                     </div>
-                                    <div class="input-group mb-1">
+                                    <div class="input-group mb-1 mt-2">
                                         <input type="file" class="form-control" id="inputGroupFile02">
                                       </div>                                    
                                     <div class="mb-1 form-check w-100">
