@@ -41,6 +41,13 @@ main{
     transition: .3s ease-in-out;
 }
 
+.breadcrumb-item::before{
+    filter: invert(1);
+    font-size: 30px;
+    position: relative;
+    bottom: 13px;
+}
+
 
 
 /* media query per vedere come collassare elementi */
@@ -53,4 +60,18 @@ main{
     main{
         width: calc(100vw - 80px);
     }
+}
+
+
+/* rimozione freccie nell'input number */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
