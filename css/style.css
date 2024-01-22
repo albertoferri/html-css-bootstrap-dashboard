@@ -26,14 +26,9 @@ main{
     height: calc(100vh - 60px);
 }
 
-
 /* personal style set */
 .my_pill{
     background-color: #0c60df;
-}
-
-.my_pointer{
-    cursor: pointer;
 }
 
 .aside-link:hover{
@@ -50,7 +45,7 @@ main{
 
 
 
-/* media query per vedere come collassare elementi */
+/* media query per vedere come collassare sidebar */
 
 @media screen and (max-width:991.98px){
 
