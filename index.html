@@ -34,7 +34,27 @@
                           <form class="d-flex w-100 gap-2" role="search">
                             <input class="form-control me-2 bg-body-secondary" type="search" placeholder="Search" aria-label="Search">
                             <button type="button" class="btn btn-light d-none d-lg-block"><i class="fa-solid fa-list"></i></button>
-                            <button type="button" class="btn btn-light d-none d-lg-block"><i class="fa-solid fa-circle-question"></i></button>
+                            <button type="button" class="btn btn-light d-none d-lg-block" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                <i class="fa-solid fa-circle-question"></i>
+                            </button>
+                            <!-- stilizzazione bottone info-->
+                            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">ATTENZIONE</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Se non visualizzi bene il sito sicuramente ho sbagliato qualcosa io. <br> Scusami
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary " data-bs-dismiss="modal">VA BENE</button>
+                                        <button type="button" class="btn btn-danger">RIMANGO SU QUESTA FINESTRA</button>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
                             <button type="button" class="btn btn-light d-none d-lg-block"><i class="fa-solid fa-ellipsis-vertical"></i></button>
                             <div class="btn-group dropstart">
                                 <button type="button" class="btn btn-light rounded-2" data-bs-toggle="dropdown" aria-expanded="false">
